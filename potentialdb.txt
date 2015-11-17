@@ -1,0 +1,9 @@
+Here's a list of viable MTG Databases we might be able to query
+
+mtgjson.com -- NOTE: Images not available through this one
+
+Gatherer Extractor -- Pulls from official DB. Promising, but sketchy downloader. Not sure if safe
+http://www.mtgsalvation.com/forums/magic-fundamentals/magic-software/337224-mtg-gatherer-extractor-v3-19-database-pics
+
+tappedout.js -- Use this one, should automatically put in hoverovers, etc.
+tappedout.github.io
