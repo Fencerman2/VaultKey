@@ -2,10 +2,10 @@ from django.contrib import admin
 
 from .models import Cards
 # Register your models here.
-class RequestAdmin(admin.ModelAdmin):
+class CardAdmin(admin.ModelAdmin):
     fieldsets = [
-        (None,              {'fields': ['cards_text']}),
+        (None,              {'fields': ['article_text']}),
         ('Date information',{'fields': ['pub_date']}),
     ]
 
-admin.site.register(Request, RequestAdmin)
+admin.site.register(Cards, CardAdmin)
