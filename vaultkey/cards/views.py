@@ -1,10 +1,19 @@
-from django.shortcuts import HttpResponse
+from django.shortcuts import get_object_or_404, render
+from django.shortcuts import HttpResponseRedirect
+from django.core.urlresolvers import reverse
+from django.views import generic
+
+from .models import Article
 
 # Create your views here.
-def index(request):
-    latest_article = Article.objects.order_by('-pub_date')[:5]
-    output = ', '.join([p.article_text for p in latest_article_list])
-    return HttpResponse(output)
+class IndexView(generic.ListView):
+    template_name = 'cards/index.html'
+    context_object_name = 'latest_article_list'
 
-def detail(request, article_id):
-    return HttpResponse("You're looking at article %s." % article_id)
+    def get_queryset(self):
+        """Return the last five published articles."""
+        return Article.objects.order_by('-pub_date')[:5]
+
+class DetailView(generic.DetailView):
+    model = Article
+    template_name = 'cards/detail.html'
