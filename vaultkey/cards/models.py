@@ -6,4 +6,7 @@ class Card(models.Model):
     article_text = models.TextField()
 
     pub_date = models.DateTimeField('date submitted')
+
+    def __unicode__(self):
+        return self.article_name
 # Create your models here.
