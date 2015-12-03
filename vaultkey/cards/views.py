@@ -15,5 +15,7 @@ class IndexView(generic.ListView):
         return Article.objects.order_by('-pub_date')[:5]
 
 class DetailView(generic.DetailView):
+
     model = Card
+
     template_name = 'cards/detail.html'
