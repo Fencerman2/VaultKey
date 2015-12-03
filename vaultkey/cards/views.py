@@ -3,7 +3,7 @@ from django.shortcuts import HttpResponseRedirect
 from django.core.urlresolvers import reverse
 from django.views import generic
 
-from .models import Article
+from .models import Card
 
 # Create your views here.
 class IndexView(generic.ListView):
@@ -15,5 +15,5 @@ class IndexView(generic.ListView):
         return Article.objects.order_by('-pub_date')[:5]
 
 class DetailView(generic.DetailView):
-    model = Article
+    model = Card
     template_name = 'cards/detail.html'

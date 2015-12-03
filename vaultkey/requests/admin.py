@@ -4,8 +4,9 @@ from .models import Request
 # Register your models here.
 class RequestAdmin(admin.ModelAdmin):
     fieldsets = [
-        ('Name',              {'fields': ['name_text']}),
-        ('Email',              {'fields': ['email_text']}),
+        ('Name',            {'fields': ['name_text']}),
+        ('Email',           {'fields': ['email_text']}),
+        ('Request',         {'fields': ['request_text']}),
         ('Date information',{'fields': ['pub_date']}),
     ]
 
