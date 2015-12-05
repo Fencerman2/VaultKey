@@ -5,7 +5,7 @@
   <form action="/alter-request/" methon="post">
     {% csrf_token %}
     {{ form }}
-    <input type="submit" value="Submit" />
+    <a href="/submit"><input type="submit" value="Submit" /></a>
   </form>
 </body>
 </html>

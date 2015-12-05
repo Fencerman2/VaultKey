@@ -3,7 +3,7 @@ from django.shortcuts import HttpResponseRedirect
 from django.core.urlresolvers import reverse
 from django.views import generic
 
-from .models import Request
+from .models import Request, Submit
 # Create your views here.
 class DetailView(generic.DetailView):
 
@@ -11,8 +11,8 @@ class DetailView(generic.DetailView):
 
     template_name = 'requests/requestform.html'
 
-class SumbitView(generic.DetailView):
+class SubmitView(generic.DetailView):
 
-    model =
+    model = Submit
 
-    template_name =
+    template_name = 'requests/submit.html'
