@@ -7,11 +7,15 @@ class Request(models.Model):
     email_text = models.CharField(max_length=100)
     card_name = models.CharField(max_length=150)
     card_quantity = models.IntegerField()
-    alter_type = forms.ChoiceField(choices=["Frameless Basic Land ($7)",
-        "Partial/Pop Up ($15)","Full Art Basic Land Extension ($15)",
-        "Frameless($20)","Frameless Art Swap - Simple ($30)",
-        "Frameless Art Swap - Complex ($40)", "Full Art Extension ($35)",
-        "Custom Full Art Swap ($45+)"])
+    alter_type = models.CharField(max_length=30,
+        choices=(("FLessBasic","Frameless Basic Land ($7)"),
+        ("Part","Partial/Pop Up ($15)"),
+        ("FABasic","Full Art Basic Land Extension ($15)"),
+        ("FrLess","Frameless($20)"),
+        ("FrLessSwapSimp","Frameless Art Swap - Simple ($30)"),
+        ("FrLessSwapComp","Frameless Art Swap - Complex ($40)"),
+        ("FA","Full Art Extension ($35)"),
+        ("Custom","Custom Full Art Swap ($45+)")))
     pub_date = models.DateTimeField('date submitted')
 
     def __unicode__(self):
