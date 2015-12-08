@@ -4,6 +4,7 @@ from .models import Card
 # Register your models here.
 class CardAdmin(admin.ModelAdmin):
     fieldsets = [
+        (None,              {'fields': ['article_name']}),
         (None,              {'fields': ['article_text']}),
         ('Date information',{'fields': ['pub_date']}),
     ]
