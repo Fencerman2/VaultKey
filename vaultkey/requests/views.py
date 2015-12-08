@@ -8,8 +8,16 @@ from .models import Request, Submit
 class DetailView(generic.DetailView):
 
     model = Request
+    def get_form(request):
+        if request.method == 'POST':
+            form = RequestForm(request.POST)
+            if form.is_valid():
+                return render (request, 'requests/submit.html')
+        else:
+            form = RequestForm()
 
-    template_name = 'requests/requestform.html'
+        return render(request, 'requests/requestform.html', {'form': form})
+
 
 class SubmitView(generic.DetailView):
 
