@@ -12,6 +12,8 @@ class CreateView(generic.CreateView):
     template_name = 'requests/request_detail.html'
     fields = ('name_text', 'email_text', 'card_name', 'card_quantity',
         'alter_type', 'card_provided')
+
+    
     # def get_form(self, request):
     #     if self.request.method == 'POST':
     #         form = RequestForm(request.POST)
@@ -25,6 +27,6 @@ class CreateView(generic.CreateView):
 
 class SubmitView(generic.DetailView):
 
-    model = Submit
+    model = Request
 
     template_name = 'requests/submit.html'

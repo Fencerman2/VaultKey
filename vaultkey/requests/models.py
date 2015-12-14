@@ -1,6 +1,6 @@
 from django.db import models
 from django import forms
-
+from django.core.urlresolvers import reverse
 # Create your models here.
 class Request(models.Model):
     name_text = models.CharField(max_length=100)
@@ -11,7 +11,7 @@ class Request(models.Model):
         choices=(("FLessBasic","Frameless Basic Land ($7)"),
         ("Part","Partial/Pop Up ($15)"),
         ("FABasic","Full Art Basic Land Extension ($15)"),
-        ("FrLess","Frameless($20)"),
+        ("FrLess","Frameless ($20)"),
         ("FrLessSwapSimp","Frameless Art Swap - Simple ($30)"),
         ("FrLessSwapComp","Frameless Art Swap - Complex ($40)"),
         ("FA","Full Art Extension ($35)"),
@@ -20,6 +20,9 @@ class Request(models.Model):
 
     def __unicode__(self):
         return self.name_text
+
+    def get_absolute_url(self):
+        return reverse('submitpage', args=(self.pk,))
 
 class Submit(models.Model):
     pub_date = models.DateTimeField('date submitted')
