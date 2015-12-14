@@ -16,7 +16,7 @@ class Request(models.Model):
         ("FrLessSwapComp","Frameless Art Swap - Complex ($40)"),
         ("FA","Full Art Extension ($35)"),
         ("Custom","Custom Full Art Swap ($45+)")))
-    pub_date = models.DateTimeField('date submitted')
+    card_provided = models.BooleanField()
 
     def __unicode__(self):
         return self.name_text

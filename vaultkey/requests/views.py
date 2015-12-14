@@ -6,18 +6,21 @@ from django.views import generic
 from .forms import RequestForm
 from .models import Request, Submit
 # Create your views here.
-class DetailView(generic.DetailView):
+class CreateView(generic.CreateView):
 
     model = Request
-    def get_form(request):
-        if request.method == 'POST':
-            form = RequestForm(request.POST)
-            if form.is_valid():
-                return render (request, 'requests/submit.html')
-        else:
-            form = RequestForm()
-
-        return render(request, 'requests/request_detail.html', {'form': form})
+    template_name = 'requests/request_detail.html'
+    fields = ('name_text', 'email_text', 'card_name', 'card_quantity',
+        'alter_type', 'card_provided')
+    # def get_form(self, request):
+    #     if self.request.method == 'POST':
+    #         form = RequestForm(request.POST)
+    #         if form.is_valid():
+    #             return render (request, 'requests/submit.html')
+    #     else:
+    #         form = RequestForm()
+    #
+    #     return render(request, 'requests/request_detail.html', {'form': form})
 
 
 class SubmitView(generic.DetailView):

@@ -9,7 +9,7 @@ class RequestAdmin(admin.ModelAdmin):
         ('Card Name',         {'fields': ['card_name']}),
         ('Card Quantity',         {'fields': ['card_quantity']}),
         ('Alter Type',         {'fields': ['alter_type']}),
-        ('Date information',{'fields': ['pub_date']}),
+        ('Card Provided?',{'fields': ['card_provided']}),
     ]
 
 admin.site.register(Request, RequestAdmin)

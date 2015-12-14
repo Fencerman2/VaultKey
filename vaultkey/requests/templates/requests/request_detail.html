@@ -2,10 +2,10 @@
 <html style="background-color:#eee">
 <body>
   <h1>Alter Request Form</h1>
-  <form action="/alter-request/" method="post">
+  <form action="" method="post">
     {% csrf_token %}
-    {{ form }}
-    <a href="/submit"><input type="submit" value="Submit" /></a>
+    {{ form.as_p }}
+    <input type="submit" value="Submit" />
   </form>
 </body>
 </html>
