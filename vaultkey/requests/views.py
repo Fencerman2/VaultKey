@@ -10,10 +10,10 @@ class CreateView(generic.CreateView):
 
     model = Request
     template_name = 'requests/request_detail.html'
-    fields = ('name_text', 'email_text', 'card_name', 'card_quantity',
+    fields = ('name_text', 'email_text', 'card_name', 'card_set', 'card_quantity',
         'alter_type', 'card_provided')
 
-    
+
     # def get_form(self, request):
     #     if self.request.method == 'POST':
     #         form = RequestForm(request.POST)

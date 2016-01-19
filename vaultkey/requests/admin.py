@@ -6,10 +6,11 @@ class RequestAdmin(admin.ModelAdmin):
     fieldsets = [
         ('Name',            {'fields': ['name_text']}),
         ('Email',           {'fields': ['email_text']}),
-        ('Card Name',         {'fields': ['card_name']}),
-        ('Card Quantity',         {'fields': ['card_quantity']}),
-        ('Alter Type',         {'fields': ['alter_type']}),
-        ('Card Provided?',{'fields': ['card_provided']}),
+        ('Card Name',       {'fields': ['card_name']}),
+        ('Card Set',        {'fields': ['card_set']}),
+        ('Card Quantity',   {'fields': ['card_quantity']}),
+        ('Alter Type',      {'fields': ['alter_type']}),
+        ('Card Provided?',  {'fields': ['card_provided']}),
     ]
 
 admin.site.register(Request, RequestAdmin)
