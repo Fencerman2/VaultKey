@@ -7,7 +7,7 @@ from .models import Article
 
 # Create your views here.
 class IndexView(generic.ListView):
-    template_name = 'cards/index.html'
+    template_name = 'articles/index.html'
     context_object_name = 'latest_article_list'
 
     def get_queryset(self):
@@ -18,4 +18,4 @@ class DetailView(generic.DetailView):
 
     model = Article
 
-    template_name = 'cards/detail.html'
+    template_name = 'articles/detail.html'
