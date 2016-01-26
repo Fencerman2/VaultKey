@@ -11,12 +11,11 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='Request',
+            name='Player',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('name_text', models.CharField(max_length=100)),
-                ('email_text', models.CharField(max_length=100)),
-                ('pub_date', models.DateTimeField(verbose_name=b'date submitted')),
+                ('player_name', models.CharField(max_length=100)),
+                ('player_description', models.TextField()),
             ],
         ),
     ]

@@ -1,0 +1,9 @@
+{% if latest_player_list %}
+  <ul>
+  {% for player in latest_player_list %}
+    <li><a href="/player/{{ player.id }}/">{{ player.player_name }}</a></li>
+  {% endfor %}
+  </ul>
+{% else %}
+  <p>No bios are available.</p>
+{% endif %}
