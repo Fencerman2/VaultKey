@@ -40,6 +40,7 @@ INSTALLED_APPS = (
     'articles',
     'requests',
     'home',
+    'player',
 )
 
 MIDDLEWARE_CLASSES = (
