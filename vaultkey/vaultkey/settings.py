@@ -47,6 +47,7 @@ INSTALLED_APPS = (
     'requests',
     'home',
     'player',
+    'contact',
 )
 
 MIDDLEWARE_CLASSES = (
