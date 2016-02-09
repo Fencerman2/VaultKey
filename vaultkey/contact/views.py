@@ -11,7 +11,7 @@ class CreateView(generic.CreateView):
     template_name = 'contact/detail.html'
     fields = ('name_text', 'email_text', 'message_text')
 
-class SubmitView(generic.DetailView):
+class SendView(generic.DetailView):
 
     model = Contact
 
