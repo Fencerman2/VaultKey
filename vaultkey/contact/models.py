@@ -11,7 +11,7 @@ class Contact(models.Model):
         return self.name_text
 
     def get_absolute_url(self):
-        return reverse('submitpage', args=(self.pk,))
+        return reverse('sendpage', args=(self.pk,))
 
 class Send(models.Model):
     pub_date = models.DateTimeField('date submitted')
