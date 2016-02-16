@@ -48,6 +48,7 @@ INSTALLED_APPS = (
     'requests',
     'home',
     'player',
+    'contact',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -93,6 +94,9 @@ DATABASES = {
     }
 }
 
+MODULES = (
+    'home.modules.Home',
+)
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/

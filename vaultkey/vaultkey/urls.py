@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+from material.frontend import urls as frontend_urls
 
 urlpatterns = [
     url(r'^$', 'home.views.index'),
@@ -22,4 +23,6 @@ urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^request/', include('requests.urls')),
     url(r'^player/', include('player.urls')),
+    url(r'^contact/', include('contact.urls')),
+    url(r'', include(frontend_urls))
 ]
