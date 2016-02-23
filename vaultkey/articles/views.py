@@ -19,3 +19,10 @@ class DetailView(generic.DetailView):
     model = Article
 
     template_name = 'articles/detail.html'
+
+class ArchiveView(generic.ListView):
+        template_name = 'articles/archiveindex.html'
+        context_object_name = 'latest_article_list'
+
+        def get_queryset(self):
+            return Article.objects.order_by('-pub_date')
