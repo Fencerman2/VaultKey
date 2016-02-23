@@ -1,3 +1,5 @@
+{% autoescape off %}
+<script src="http://tappedout.net/tappedout.js"></script>
 {% if latest_article_list %}
   <ul>
   {% for article in latest_article_list %}
@@ -7,5 +9,6 @@
 {% else %}
   <p>No articles are available.</p>
 {% endif %}
+{% endautoescape %}
 <a href="/articles/archive">View all articles</a>
 <a href="/">Home</a>
