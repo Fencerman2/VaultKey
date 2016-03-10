@@ -33,23 +33,23 @@ class SubmitView(generic.DetailView):
 
     template_name = 'contact/submit.html'
 
-    def email(request):
-        if request.method == 'GET':
-            form = ContactForm()
-        else:
-            print 'did I get here?'
-            form = ContactForm(request.POST)
-            if form.is_valid():
-                subject_text = form.cleaned_data['subject_text']
-                email_text = form.cleaned_data['email_text']
-                message_text = form.cleaned_data['message_text']
-                try:
-                    send_mail(subject_text, message_text, email_text,
-                        ['vaultkeystudios@gmail.com'], fail_silenty=False)
-                except BadHeaderError:
-                    return HttpResponse('Invalid header found.')
-                except:
-                    print sys.exc_info(), traceback.format_exc()
-
-                return redirect('thanks')
-        return render(request, "contact/detail.html", {'form': form})
+    # def email(request):
+    #     if request.method == 'GET':
+    #         form = ContactForm()
+    #     else:
+    #         print 'did I get here?'
+    #         form = ContactForm(request.POST)
+    #         if form.is_valid():
+    #             subject_text = form.cleaned_data['subject_text']
+    #             email_text = form.cleaned_data['email_text']
+    #             message_text = form.cleaned_data['message_text']
+    #             try:
+    #                 send_mail(subject_text, message_text, email_text,
+    #                     ['vaultkeystudios@gmail.com'], fail_silenty=False)
+    #             except BadHeaderError:
+    #                 return HttpResponse('Invalid header found.')
+    #             except:
+    #                 print sys.exc_info(), traceback.format_exc()
+    #
+    #             return redirect('thanks')
+    #     return render(request, "contact/detail.html", {'form': form})
