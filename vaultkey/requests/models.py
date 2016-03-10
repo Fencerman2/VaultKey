@@ -8,7 +8,7 @@ class Request(models.Model):
     card_name = models.CharField(max_length=150, verbose_name='Card Name')
     card_set = models.CharField(max_length=150, verbose_name='Card Set')
     card_quantity = models.IntegerField()
-    alter_type = models.CharField(max_length=30, verbose_name='Alter Type'
+    alter_type = models.CharField(max_length=30, verbose_name='Alter Type',
         choices=(("FLessBasic","Frameless Basic Land ($7)"),
         ("Part","Partial/Pop Up ($15)"),
         ("FABasic","Full Art Basic Land Extension ($15)"),
