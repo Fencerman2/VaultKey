@@ -4,7 +4,7 @@ from django.core.urlresolvers import reverse
 # Create your models here.
 class Contact(models.Model):
     name_text = models.CharField(max_length=150, verbose_name='Name')
-    email_text = models.CharField(max_length=200, verbose_name='Email')
+    email_text = models.CharField(max_length=200, verbose_name='Email Address')
     subject_text = models.CharField(max_length=200, verbose_name='Subject')
     message_text = models.TextField(verbose_name='Message')
 
