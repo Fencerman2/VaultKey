@@ -1,7 +1,9 @@
-{% if latest_article_list %}
+{% autoescape off %}
 {% include 'material/includes/material_css.html' %}
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 {% include 'material/includes/material_js.html' %}
+<script src="http://tappedout.net/tappedout.js"></script>
+{% if latest_article_list %}
   <ul>
   {% for article in latest_article_list %}
     <li><a href="/articles/{{ article.id }}/">{{ article.article_name }}</a></li>
@@ -10,5 +12,6 @@
 {% else %}
   <p>No articles are available.</p>
 {% endif %}
+{% endautoescape %}
 <a href ="/articles">View only the latest articles</a>
 <a href="/">Home</a>
