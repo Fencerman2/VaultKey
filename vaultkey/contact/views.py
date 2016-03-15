@@ -1,6 +1,6 @@
 from django.shortcuts import get_object_or_404, render
 from django.shortcuts import HttpResponseRedirect
-# from django.core.mail import send_mail
+from vaultkey.utils.emails import send_simple_message
 from django.core.urlresolvers import reverse
 from django.views import generic
 
@@ -21,8 +21,8 @@ class CreateView(generic.CreateView):
         email_text = form.cleaned_data['email_text']
         message_text = form.cleaned_data['message_text']
         try:
-            send_mail(subject_text, message_text, email_text,
-                ['vaultkeystudios@gmail.com'], fail_silently=False)
+            send_simple_message(subject_text, message_text,
+                ['vaultkeystudios@gmail.com'])
         except:
             print sys.exc_info(), traceback.format_exc()
         return super(CreateView, self).form_valid(form)
