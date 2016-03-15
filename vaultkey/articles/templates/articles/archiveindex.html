@@ -1,4 +1,7 @@
 {% if latest_article_list %}
+{% include 'material/includes/material_css.html' %}
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+{% include 'material/includes/material_js.html' %}
   <ul>
   {% for article in latest_article_list %}
     <li><a href="/articles/{{ article.id }}/">{{ article.article_name }}</a></li>
