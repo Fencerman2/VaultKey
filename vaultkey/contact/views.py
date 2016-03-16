@@ -22,7 +22,7 @@ class CreateView(generic.CreateView):
         message_text = form.cleaned_data['message_text']
         try:
             send_simple_message(subject_text, message_text,
-                ['vaultkeystudios@gmail.com'])
+                ['vaultkeystudios@gmail.com'], email_text)
         except:
             print sys.exc_info(), traceback.format_exc()
         return super(CreateView, self).form_valid(form)

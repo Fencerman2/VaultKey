@@ -22,8 +22,8 @@ class CreateView(generic.CreateView):
         email_text = form.cleaned_data['email_text']
         message_text = "Check the admin site for details"
         try:
-            send_simple_message(subject_text, message_text, email_text,
-                ['vaultkeystudios@gmail.com'])
+            send_simple_message(subject_text, message_text,
+                ['vaultkeystudios@gmail.com'], email_text)
         except:
             print sys.exc_info(), traceback.format_exc()
         return super(CreateView, self).form_valid(form)
