@@ -1,15 +1,10 @@
 from django.shortcuts import get_object_or_404, render
 from django.shortcuts import HttpResponseRedirect
-<<<<<<< HEAD
 from vaultkey.utils.emails import send_simple_message
-=======
->>>>>>> origin/Danny
 from django.core.urlresolvers import reverse
 from django.views import generic
 
 from .models import Contact
-
-from vaultkey.utils.emails import send_simple_message
 
 import sys, traceback
 # Create your views here.
