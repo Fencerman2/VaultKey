@@ -7,6 +7,7 @@ class ArticleAdmin(admin.ModelAdmin):
         (None,              {'fields': ['article_name']}),
         (None,              {'fields': ['article_text']}),
         ('Date information',{'fields': ['pub_date']}),
+        (None,              {'fields': ['image']}),
     ]
 
 admin.site.register(Article, ArticleAdmin)

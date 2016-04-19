@@ -7,6 +7,8 @@ class Article(models.Model):
 
     pub_date = models.DateTimeField('date submitted')
 
+    image = models.FileField(blank=True, null=True)
+
     def __unicode__(self):
         return self.article_name
 # Create your models here.
