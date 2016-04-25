@@ -30,7 +30,7 @@
 {% autoescape off %}
 <h1>{{ object.player_name }}</h1>
 {% if player.image %}
-  <img src='{{ object.image }}'>
+  <img src='{{ object.image.url }}'>
 {% endif %}
 <p>{{ object.player_description }}</p>
 {% endautoescape %}
