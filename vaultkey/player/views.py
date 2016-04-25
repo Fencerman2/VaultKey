@@ -8,7 +8,7 @@ from .models import Player
 # Create your views here.
 class IndexView(generic.ListView):
     template_name = 'player/index.html'
-    context_object_name = 'latest_player_list'
+    context_object_name = 'player_list'
 
     def get_queryset(self):
         """Return the list of players"""
