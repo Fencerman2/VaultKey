@@ -1,13 +1,13 @@
 from django.db import models
 
 class Article(models.Model):
-    article_name = models.CharField(max_length=200)
+    article_name = models.CharField(max_length=200);
 
-    article_text = models.TextField()
+    article_text = models.TextField();
 
-    pub_date = models.DateTimeField('date submitted')
+    pub_date = models.DateTimeField('date submitted');
 
-    image = models.FileField(blank=True, null=True)
+    image = models.FileField(blank=True, null=True);
 
     def __unicode__(self):
         return self.article_name

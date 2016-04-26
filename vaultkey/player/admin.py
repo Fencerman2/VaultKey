@@ -6,6 +6,7 @@ class PlayerAdmin(admin.ModelAdmin):
     fieldsets = [
         (None,  {'fields': ['player_name']}),
         (None,  {'fields': ['player_description']}),
+        (None,  {'fields': ['image']}),
     ]
 
 admin.site.register(Player, PlayerAdmin)
