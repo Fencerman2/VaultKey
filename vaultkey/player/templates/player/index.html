@@ -26,7 +26,7 @@
 {% if player_list %}
   <ul>
   {% for player in player_list %}
-    <li><a href="/player/{{ player.id }}/">{{ player.player_name }}</a></li>
+    <li><a href="/player/{{ player.id }}/">{{ player.player_firstname }} {{ player.player_lastname }}</a></li>
   {% endfor %}
   </ul>
 {% else %}

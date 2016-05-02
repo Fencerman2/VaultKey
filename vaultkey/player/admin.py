@@ -4,7 +4,8 @@ from .models import Player
 # Register your models here.
 class PlayerAdmin(admin.ModelAdmin):
     fieldsets = [
-        (None,  {'fields': ['player_name']}),
+        (None,  {'fields': ['player_firstname']}),
+        (None,  {'fields': ['player_lastname']}),
         (None,  {'fields': ['player_description']}),
         (None,  {'fields': ['image']}),
     ]
