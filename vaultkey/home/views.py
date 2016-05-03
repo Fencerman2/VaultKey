@@ -6,6 +6,6 @@ from player.models import Player
 def index(request):
     return render_to_response('home/index.html',
         {'recent_articles': Article.objects.order_by('-pub_date')[:6],
-        'player_list':     Player.objects.order_by('player_name')
+        'player_list':     Player.objects.order_by('player_lastname')
         }
     )
