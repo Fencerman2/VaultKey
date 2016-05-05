@@ -30,6 +30,8 @@
 {% autoescape off %}
 <h1>{{ object.article_name }}</h1>
 <p>{{ object.article_text }}</p>
+<h3>{{ object.author.player_firstname }} {{ object.author.player_lastname }}</h3>
+<p>{{ object.author.player_description }}</p>
 {% endautoescape %}
 <a href="/">Home</a>
 </body>

@@ -28,10 +28,12 @@
 <body>
 <script src="http://tappedout.net/tappedout.js"></script>
 {% autoescape off %}
-<h1>{{ object.player_firstname }} {{ object.player_lastname }}</h1>
+<h3>
 {% if player.image %}
   <img src='{{ object.image.url }}'>
 {% endif %}
+{{ object.player_firstname }} {{ object.player_lastname }}
+</h3>
 <p>{{ object.player_description }}</p>
 {% endautoescape %}
 <a href="/">Home</a>

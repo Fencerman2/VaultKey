@@ -6,6 +6,7 @@ class ArticleAdmin(admin.ModelAdmin):
     fieldsets = [
         (None,              {'fields': ['article_name']}),
         (None,              {'fields': ['article_text']}),
+        (None,              {'fields': ['author']}),
         ('Date information',{'fields': ['pub_date']}),
         (None,              {'fields': ['image']}),
     ]
