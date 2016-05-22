@@ -12,7 +12,7 @@ class IndexView(generic.ListView):
 
     def get_queryset(self):
         """Return the list of players"""
-        return Player.objects.order_by('player_name')
+        return Player.objects.order_by('player_lastname')
 
 class DetailView(generic.DetailView):
 
